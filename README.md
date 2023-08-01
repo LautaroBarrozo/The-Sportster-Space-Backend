@@ -14,7 +14,7 @@ si no encuentra el usuario o la contraseña no coincide responde con un status 4
 
 post /logout : devuelve un token vacio para borrar la cookie creada durande el login y responde con un status 200
 
-get /verify : recive el token que se encuentra en la cookie creada durante el login y responde con true o false dependiendo
+post /verify : recive el token que se encuentra en la cookie creada durante el login y responde con true o false dependiendo
 si la cookie aun es valida o no
 
 -------------------------------------------------RUTAS DE CRUD DEL CARRITO-----------------------------------------------
