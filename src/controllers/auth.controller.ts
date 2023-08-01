@@ -84,18 +84,24 @@ export const verifyToken = async (req: express.Request, res: express.Response) =
     const {token} = req.cookies
 
     if (!token) {
-        return res.send(false)
+        // return res.send(false)
+        const message = "!token"
+        return message
     }
 
     jwt.verify(token, TOKEN_SECRET, async (err : any, user : any) => {
         if (err) {
-            return res.send(false)
+            const message = "err"
+            // return res.send(false)
+            return message
         }
 
         const userFound = await User.findById(user.id)
 
         if (!userFound) {
-            return res.send(false)
+            const message = "!userfound"
+            return message
+            // return res.send(false)
         }
 
 
