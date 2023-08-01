@@ -6,7 +6,7 @@ import authRoutes from "./routes/auth.routes"
 import cartRoutes from "./routes/cart.routes"
 import commentsRoutes from "./routes/comments.routes"
 
-// require("dotenv").config({path:__dirname+'/.env'});
+require("dotenv").config({path:__dirname+'/.env'});
 
 export const DATABASE_URL= process.env.DATABASE_URL as string
 export const TOKEN_SECRET= process.env.TOKEN_SECRET as string
@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 4000
 
 const app = express()
 
-app.use(cors({origin: "*", credentials: true}))
+app.use(cors({credentials: true}))
 app.use(express.json())
 app.use(cookieParser())
 
