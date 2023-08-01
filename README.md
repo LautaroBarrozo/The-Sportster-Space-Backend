@@ -38,7 +38,7 @@ dependiendo si el producto fue encontrado o no
 post /deleteCart : recive el userId y elimina todos los productos que coincidan con el userId responde con la cantidad de elementos que
 fueron eliminados
 
--------------------------------------------RUTAS DE CREACIÓN/OBTENCIÓN DE COMENTARIOS---------------------------
+--------------------------------------RUTAS DE CREACIÓN/OBTENCIÓN DE COMENTARIOS--------------------------------
 
 post /addComment : recive comment, userName y productId si todos los datos cumpllen los requizitos guarda los datos y responde un
 json con los datos guardados
