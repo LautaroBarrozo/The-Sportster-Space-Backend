@@ -2,7 +2,7 @@ funcionamiento de la api y rutas:
 
 todas las rutas comienzan con /api por ejemplo para registrar un usuario la ruta será /api/register
 
--------------------------------------------RUTAS DE CREACIÓN/AUTENTICACIÓN DE USUARIO-------------------------------------------------------
+-------------------------------------------RUTAS DE CREACIÓN/AUTENTICACIÓN DE USUARIO-----------------------------
 
 post /register : recive userName, userEmail, userPassword y confirmPassword desde el body si todos los datos cumplen con los requizitos
 realiza el hash de userPassword y guarda los datos y responde un json con los datos guardados.
@@ -17,7 +17,7 @@ post /logout : devuelve un token vacio para borrar la cookie creada durande el l
 get /verify : recive el token que se encuentra en la cookie creada durante el login y responde con true o false dependiendo
 si la cookie aun es valida o no
 
--------------------------------------------------RUTAS DE CRUD DEL CARRITO------------------------------------------------------------------
+-------------------------------------------------RUTAS DE CRUD DEL CARRITO-----------------------------------------------
 
 post /addProduct : recive image, name, price, productId y userId desde el body si todos los datos cumplen con los requizitos
 guarda los datos y responde un json con los datos guardados
@@ -38,7 +38,7 @@ dependiendo si el producto fue encontrado o no
 post /deleteCart : recive el userId y elimina todos los productos que coincidan con el userId responde con la cantidad de elementos que
 fueron eliminados
 
--------------------------------------------RUTAS DE CREACIÓN/OBTENCIÓN DE COMENTARIOS-------------------------------------------------------
+--------------------------------------RUTAS DE CREACIÓN/OBTENCIÓN DE COMENTARIOS--------------------------------
 
 post /addComment : recive comment, userName y productId si todos los datos cumpllen los requizitos guarda los datos y responde un
 json con los datos guardados
