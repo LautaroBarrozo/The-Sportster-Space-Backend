@@ -60,8 +60,9 @@ export const login = async (req: express.Request, res: express.Response) =>{
 
         const token = await accesTokenCreation({id: userFound._id})
         
-        res.cookie("token", token)
+        // res.cookie("token", token)
         res.json({
+            token: token,
             id: userFound._id,
             userName: userFound.userName,
             userEmail: userFound.userEmail,
@@ -81,7 +82,7 @@ export const logout = (req: express.Request, res: express.Response) =>{
 
 
 export const verifyToken = async (req: express.Request, res: express.Response) => {
-    const {token} = req.cookies
+    const {token} = req.body
 
     if (!token) {
         // return res.send(false)
