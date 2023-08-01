@@ -2,7 +2,7 @@ funcionamiento de la api y rutas:
 
 todas las rutas comienzan con /api por ejemplo para registrar un usuario la ruta será /api/register
 
--------------------------------------------RUTAS DE CREACIÓN/AUTENTICACIÓN DE USUARIO-------------------------------------------------------
+-------------------------------------------RUTAS DE CREACIÓN/AUTENTICACIÓN DE USUARIO----------------------------
 
 post /register : recive userName, userEmail, userPassword y confirmPassword desde el body si todos los datos cumplen con los requizitos
 realiza el hash de userPassword y guarda los datos y responde un json con los datos guardados.
