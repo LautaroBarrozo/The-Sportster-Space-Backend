@@ -86,21 +86,21 @@ export const verifyToken = async (req: express.Request, res: express.Response) =
     if (!token) {
         // return res.send(false)
         const message = "!token"
-        return message
+        return res.send(message)
     }
 
     jwt.verify(token, TOKEN_SECRET, async (err : any, user : any) => {
         if (err) {
             const message = "err"
             // return res.send(false)
-            return message
+            return res.send(message)
         }
 
         const userFound = await User.findById(user.id)
 
         if (!userFound) {
             const message = "!userfound"
-            return message
+            return res.send(message)
             // return res.send(false)
         }
 
